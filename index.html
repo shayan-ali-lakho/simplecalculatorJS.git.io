@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="user1" placeholder="Enter Number 1">
+    <br>
+    <br>
+    <input type="text" id="user2" placeholder="Enter Number 2">
+    <br>
+    <br>
+    <h1>RESULT</h1>
+    Add:<p id="add" > </p>
+     Sub:<p id="sub"> </p>
+     Mult:<p id="mult"> </p>
+     Divide:<p id="div"> </p>
+
+    <br>
+    <button  onclick="add()" style="background-color:yellow;">add</button>
+    <button  onclick="sub()" style="background-color:rgb(0, 255, 42);">sub</button>
+    <button  onclick="mult()" style="background-color:blue ;">mult</button>
+    <button  onclick="divide()" style="background-color:rgb(0, 255, 234);">divide</button>
+    <button onclick="Delete()">Clear</button>
+    <script>
+function add(){
+   let a = parseInt( document.getElementById("user1").value);
+   let d = parseInt(document.getElementById("user2").value);
+    document.getElementById("add").innerText = a+d;
+     
+}
+function sub(){
+let s =  document.getElementById("user1").value;
+let  b = document.getElementById("user2").value;
+    document.getElementById("sub").innerText = s-b;
+}
+function mult(){
+let m = document.getElementById("user1").value;
+   let  l = document.getElementById("user2").value;
+    document.getElementById("mult").innerText = m*l;
+}
+function divide(){
+    let i = document.getElementById("user1").value;
+    let  v= document.getElementById("user2").value;
+    document.getElementById("div").innerText = i/v;
+}
+function Delete(){
+    document.getElementById("user1").value="";
+    document.getElementById("user2").value="";
+}
+    </script>
+</body>
+</html>
